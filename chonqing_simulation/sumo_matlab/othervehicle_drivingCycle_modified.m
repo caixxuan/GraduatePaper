@@ -1,0 +1,20 @@
+% load (其他车数据,'alph_cyc','distance','v_act');
+distance(distance<0)=[];
+remain_dis(remain_dis<0)=[];
+v_act=v_act_record((length(v_act_record)-length(distance))+1:end);
+s=distance;
+v_cyc=v_act;
+t_cyc=[1:1:length(v_cyc)]';
+load ('elevation.mat');
+tmp=smooth(linspace(1,120e3*3500/length(elevation),3500),elevation(1:3500),1000);
+elevation(1:3500)=tmp;
+ele=interp1(linspace(1,120e3,length(elevation)),elevation,linspace(1,distance(end),length(distance)),'spline');
+ele=ele';
+ele=smooth(distance,ele,80);
+alph_cyc=diff(ele)./diff(distance);
+alph_cyc(alph_cyc<-0.05)=-0.05;
+alph_cyc(alph_cyc>0.05)=0.05;
+alph_cyc=[alph_cyc(1);alph_cyc];
+alph_cyc=fillmissing(alph_cyc,'next');
+save('S:\Documents\graduate_paper\research\chonqing_simulation\sumo_matlab\outputdata\othervehicle.mat',...
+    'alph_cyc','t_cyc','v_cyc','s');

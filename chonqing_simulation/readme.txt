@@ -1,0 +1,5 @@
+1.SUMO仿真：运行文件夹sumo_matlab中的test，输出ego_vehicle_data.mat数据
+2.目标车运行数据及道路分段数据定义：运行ego_modified.m
+3.交通速度数据定义：运行命令提示符，使用xml2csv.py工具将.xml文件转换为csv表格，并将其中的edge_id按升序排列，删除其中所有的文字数据，运行csvinput.m修饰交通数据，保存为traffic_meanspeed.mat
+4.运行othervehicle_drivingCycle_modified.m加载其他车辆的历史工况，在仿真后记录Pdmd、distance为Pdmd_othervehicle.mat。
+5.运行data_modified.m，修饰仿真加载数据DrivingCycle_and_TraffInfo.mat

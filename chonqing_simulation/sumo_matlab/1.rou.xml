@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 03/18/21 19:44:07 by Eclipse SUMO netedit Version 1.8.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <output>
+        <output-file value="D:\BaiduNetdiskDownload\sumo-win64extra-1.8.0\sumo-1.8.0\file\319\1.net.xml"/>
+    </output>
+
+    <processing>
+        <offset.disable-normalization value="true"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+    </junctions>
+
+    <netedit>
+        <route-files value="D:\BaiduNetdiskDownload\sumo-win64extra-1.8.0\sumo-1.8.0\file\319\1.rou.xml"/>
+    </netedit>
+
+    <report>
+        <aggregate-warnings value="5"/>
+    </report>
+
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    
+	<vType id="bus" vClass="bus" length="10" speedFactor="1.1" carFollowModel="IDM" accel="1.2" decel="3" apparentDecel="2" emergencyDecel="7" speedDev="0.05" maxSpeed="25" lcSpeedGain="0.1" probability="0.1"/>
+	<vType id="truck" length="7" speedFactor="1.1" carFollowModel="IDM" accel="1" decel="2.5" apparentDecel="2" emergencyDecel="6" speedDev="0.05" vClass="truck" maxSpeed="25" lcSpeedGain="0.1" probability="0.05"/>
+	<vType id="car" vClass="passenger" length="4.5" speedFactor="1.1" carFollowModel="IDM" accel="1.5" decel="3.5" apparentDecel="2" emergencyDecel="8" speedDev="0.05" maxSpeed="35" lcSpeedGain="0.3" probability="0.85"/>
+	<vTypeDistribution id="typedist1" vTypes="bus truck car"/>
+	
+	<flow id="fs_1" type="typedist1" begin="0" color="red" end="20000" from="gneE_start" to="gneE1" vehsPerHour="10"/>
+	<flow id="fs_10" type="typedist1" begin="0" color="red" end="20000" from="gneE_start" to="gneE10" vehsPerHour="20"/>
+	<flow id="fs_17" type="typedist1" begin="0" color="red" end="20000" from="gneE_start" to="gneE17" vehsPerHour="10"/>
+	<flow id="fs_18" type="typedist1" begin="0" color="red" end="20000" from="gneE_start" to="gneE18" vehsPerHour="20"/>
+	<flow id="fs_38" type="typedist1" begin="0" color="red" end="20000" from="gneE_start" to="gneE38" vehsPerHour="20"/>
+	<flow id="fs_39" type="typedist1" begin="0" color="red" end="20000" from="gneE_start" to="gneE39" vehsPerHour="50"/>
+	<flow id="fs_40" type="typedist1" begin="0" color="red" end="20000" from="gneE_start" to="gneE40" vehsPerHour="30"/>
+	<flow id="fs_41" type="typedist1" begin="0" color="red" end="20000" from="gneE_start" to="gneE41" vehsPerHour="5"/>
+	
+	<flow id="f1_10" type="typedist1" begin="0" color="red" end="20000" from="gneE1" to="gneE10" vehsPerHour="10"/>
+	<flow id="f1_17" type="typedist1" begin="0" color="red" end="20000" from="gneE1" to="gneE17" vehsPerHour="10"/>
+	<flow id="f1_18" type="typedist1" begin="0" color="red" end="20000" from="gneE1" to="gneE18" vehsPerHour="5"/>
+	<flow id="f1_38" type="typedist1" begin="0" color="red" end="20000" from="gneE1" to="gneE38" vehsPerHour="40"/>
+	<flow id="f1_39" type="typedist1" begin="0" color="red" end="20000" from="gneE1" to="gneE39" vehsPerHour="30"/>
+	<flow id="f1_40" type="typedist1" begin="0" color="red" end="20000" from="gneE1" to="gneE40" vehsPerHour="20"/>
+	<flow id="f1_41" type="typedist1" begin="0" color="red" end="20000" from="gneE1" to="gneE41" vehsPerHour="30"/>
+	
+	<flow id="f10_17" type="typedist1" begin="0" color="red" end="20000" from="gneE10" to="gneE17" vehsPerHour="50"/>
+	<flow id="f10_18" type="typedist1" begin="0" color="red" end="20000" from="gneE10" to="gneE18" vehsPerHour="20"/>
+	<flow id="f10_38" type="typedist1" begin="0" color="red" end="20000" from="gneE10" to="gneE38" vehsPerHour="100"/>
+	<flow id="f10_39" type="typedist1" begin="0" color="red" end="20000" from="gneE10" to="gneE39" vehsPerHour="200"/>
+	<flow id="f10_40" type="typedist1" begin="0" color="red" end="20000" from="gneE10" to="gneE40" vehsPerHour="100"/>
+	<flow id="f10_41" type="typedist1" begin="0" color="red" end="20000" from="gneE10" to="gneE41" vehsPerHour="10"/>
+	
+	<flow id="f17_18" type="typedist1" begin="0" color="red" end="20000" from="gneE17" to="gneE18" vehsPerHour="100"/>
+	<flow id="f17_38" type="typedist1" begin="0" color="red" end="20000" from="gneE17" to="gneE38" vehsPerHour="100"/>
+	<flow id="f17_39" type="typedist1" begin="0" color="red" end="20000" from="gneE17" to="gneE39" vehsPerHour="80"/>
+	<flow id="f17_40" type="typedist1" begin="0" color="red" end="20000" from="gneE17" to="gneE40" vehsPerHour="60"/>
+	<flow id="f17_41" type="typedist1" begin="0" color="red" end="20000" from="gneE17" to="gneE41" vehsPerHour="50"/>
+	
+	<flow id="f18_38" type="typedist1" begin="0" color="red" end="20000" from="gneE18" to="gneE38" vehsPerHour="50"/>
+	<flow id="f18_39" type="typedist1" begin="0" color="red" end="20000" from="gneE18" to="gneE39" vehsPerHour="100"/>
+	<flow id="f18_40" type="typedist1" begin="0" color="red" end="20000" from="gneE18" to="gneE40" vehsPerHour="100"/>
+	<flow id="f18_41" type="typedist1" begin="0" color="red" end="20000" from="gneE18" to="gneE41" vehsPerHour="20"/>
+	
+	<flow id="f38_39" type="typedist1" begin="0" color="red" end="20000" from="gneE38" to="gneE39" vehsPerHour="50"/>
+	<flow id="f38_40" type="typedist1" begin="0" color="red" end="20000" from="gneE38" to="gneE40" vehsPerHour="50"/>
+	<flow id="f38_41" type="typedist1" begin="0" color="red" end="20000" from="gneE38" to="gneE41" vehsPerHour="100"/>
+	
+	<flow id="f39_40" type="typedist1" begin="0" color="red" end="20000" from="gneE39" to="gneE40" vehsPerHour="100"/>
+	<flow id="f39_41" type="typedist1" begin="0" color="red" end="20000" from="gneE39" to="gneE41" vehsPerHour="100"/>
+	
+	<flow id="f40_41" type="typedist1" begin="0" color="red" end="20000" from="gneE40" to="gneE41" vehsPerHour="600"/>
+	
+	<flow id="f41_41" type="typedist1" begin="0" color="red" end="20000" from="gneE41" to="gneE41" vehsPerHour="500"/>
+	
+	<trip id="vehicle_0" type="bus" depart="500" departSpeed="0" color="yellow" from="gneE0" to="gneE41" arrivalSpeed="0"/>
+</routes>
